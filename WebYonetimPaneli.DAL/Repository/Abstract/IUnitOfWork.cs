@@ -10,7 +10,7 @@ namespace WebYonetimPaneli.DAL.Repository.Abstract
         ISliderRepository Slider { get; }
         IGaleriKategoriRepository GaleriKategori { get; }
         IGaleriRepository Galeri { get; }
- 
+ //Devami Yazılacak.
         int SaveChanges();
     }
 }
