@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Galeri>
+@{
+    ViewData["Title"] = "Galeri";
+}
+@section scripts
+    {
+    <script>
+
+        $(".delete").click(function (event) {
+
+            event.preventDefault();
+
+            var form = $(this).parent();
+            var row = form.parent("td").parent("tr");
+
+            var token = $('input[name="__RequestVerificationToken"]', form).val();
+            var data = { ID: $("#ID", form).val() };
+            var dataWithToken = $.extend(data, { '__RequestVerificationToken': token });
+
+
+            $.ajax({
+                url: form.attr("action"),
+                data: dataWithToken,
+                type: "Post",
+                beforeSend: function () {
+                    $("#ajax-loader").show();
+                },
+                complete: function () {
+                    $("#ajax-loader").hide();
+                },
+                success: function () {
+                    row.remove();
+                },
+                error: function () {
+
+                }
+
+            });
+
+        });
+
+
+    </script>
+}
+<div class="card-footer">
+
+    <a class="btn btn-success  btn-sm" asp-controller="Galeri" asp-action="EkleDuzenle">Ekle  <i class="fa fa-plus"></i></a>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Resim</th>
+                <th>Açıklama</th>
+                <th>Kategori</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.ID</td>
+                <td><img alt="" style="height: 50px;" class="img-responsive product-thumb" src="~/img/galeri/@item.URL"></td>
+                <td>@item.Aciklama</td>
+                <td>@item.GaleriKategori.KategoriAdi</td>
+                <td><a class="btn btn-primary btn-sm" asp-controller="Galeri" asp-action="EkleDuzenle" asp-route-id="@item.ID">Güncelle  <i class="fa fa-pencil-alt  "></i></a></td>
+                <td>
+
+                    <form asp-controller="Galeri" asp-action="Sil" asp-route-id="@item.ID" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="ProductId" value="@item.ID" />
+                        <button type="submit" class="btn btn-danger btn-sm delete" onclick="return confirm('Kaydı Silmek İstediğinizden Emin Misiniz?');">
+                            Sil
+                            <i class="fa fa-times fa-fw"></i>
+                        </button>
+                    </form>
+
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

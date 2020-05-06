@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebYonetimPaneli.UI", "WebYonetimPaneli.UI\WebYonetimPaneli.UI.csproj", "{FE60942E-9861-482D-8C3A-0F961E3155BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebYonetimPaneli.DAL", "WebYonetimPaneli.DAL\WebYonetimPaneli.DAL.csproj", "{B35D789A-C681-4DCA-BA19-482E50033D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebYonetimPaneli.BL", "WebYonetimPaneli.BL\WebYonetimPaneli.BL.csproj", "{706CA74B-E7BB-4003-95D7-16E14B7857C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE60942E-9861-482D-8C3A-0F961E3155BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE60942E-9861-482D-8C3A-0F961E3155BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE60942E-9861-482D-8C3A-0F961E3155BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE60942E-9861-482D-8C3A-0F961E3155BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35D789A-C681-4DCA-BA19-482E50033D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35D789A-C681-4DCA-BA19-482E50033D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35D789A-C681-4DCA-BA19-482E50033D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35D789A-C681-4DCA-BA19-482E50033D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706CA74B-E7BB-4003-95D7-16E14B7857C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706CA74B-E7BB-4003-95D7-16E14B7857C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706CA74B-E7BB-4003-95D7-16E14B7857C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706CA74B-E7BB-4003-95D7-16E14B7857C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2922D546-38BE-41EF-80EC-DFB6509A0055}
+	EndGlobalSection
+EndGlobal

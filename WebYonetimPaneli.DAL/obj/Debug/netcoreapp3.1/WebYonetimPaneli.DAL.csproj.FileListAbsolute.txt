@@ -1,0 +1,15 @@
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.deps.json
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.runtimeconfig.json
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.runtimeconfig.dev.json
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.dll
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.pdb
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.BL.dll
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\bin\Debug\netcoreapp3.1\WebYonetimPaneli.BL.pdb
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.csprojAssemblyReference.cache
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.csproj.CoreCompileInputs.cache
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.AssemblyInfoInputs.cache
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.AssemblyInfo.cs
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.csproj.CopyComplete
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.dll
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.pdb
+C:\Users\CEA-PC\source\repos\WebYonetimPaneli\WebYonetimPaneli.DAL\obj\Debug\netcoreapp3.1\WebYonetimPaneli.DAL.genruntimeconfig.cache

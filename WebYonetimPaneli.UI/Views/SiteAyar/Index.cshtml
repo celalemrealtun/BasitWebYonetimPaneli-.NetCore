@@ -1,0 +1,111 @@
+﻿@model SiteAyar
+@{
+    ViewData["Title"] = "Site Ayarları";
+}
+@section scripts{
+    <script src="~/lib/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("Hakkimizda");
+        CKEDITOR.replace("VizyonMisyon");
+        CKEDITOR.replace("Iletisim");
+
+    </script>
+}
+<div class=" ">
+    
+    <form asp-controller="SiteAyar" asp-action="EditSiteAyar" method="post" enctype="multipart/form-data">
+        <div class="card-body">
+            @Html.AntiForgeryToken()
+            <div class="text-danger" asp-validation-summary="All"></div>
+
+            <input type="hidden" name="ID" value="@Model.ID" />
+            <input type="hidden" asp-for="SiteLogo" />
+            <div class="form-group">
+                <label asp-for="SiteLogo">Site Logosu</label>
+                </br>
+
+                @if (Model.SiteLogo != null)
+                {
+                    <img src="~/img/@Model.SiteLogo" width="120" />
+                }
+                else
+                {
+                    <span style="color:orangered; text-shadow: 2px 2px 2px #000000">Lütfen Resim Ekleyin!</span>
+                }
+                </br>
+
+                <span style="color:orangered; text-shadow: 2px 2px 2px #1e1e1e">Önerilen Boyut 108x21</span>
+                <input type="file" name="Logo" id="Logo" class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteAdi">Site Adı</label>
+                <input asp-for="SiteAdi" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteAnahtar">Site Anahtar</label>
+                <input asp-for="SiteAnahtar" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteAciklama">Site Açıklama</label>
+                <input asp-for="SiteAciklama" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteURL">Site URL</label>
+                <input asp-for="SiteURL" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefon">Telefon</label>
+                <input asp-for="Telefon" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">E-Mail</label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres">Adres</label>
+                <input asp-for="Adres" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HaritaKonum">Harita Konum</label>
+                <input asp-for="HaritaKonum" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Facebook">Facebook</label>
+                <input asp-for="Facebook" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Instagram">Instagram</label>
+                <input asp-for="Instagram" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Twitter">Twitter</label>
+                <input asp-for="Twitter" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="OrtaBaslik">Orta Kısım Başlık</label>
+                <input asp-for="OrtaBaslik" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="OrtaIcerik">Orta Kısım İçerik</label>
+                <input asp-for="OrtaIcerik" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Hakkimizda">Hakkımızda</label>
+                <textarea asp-for="Hakkimizda" class="form-control" />@Model.Hakkimizda</textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="VizyonMisyon">Vizyon & Misyon</label>
+                <textarea asp-for="VizyonMisyon" class="form-control" />@Model.VizyonMisyon</textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iletisim">İletişim</label>
+                <textarea asp-for="Iletisim" class="form-control" />@Model.Iletisim</textarea>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+</div>

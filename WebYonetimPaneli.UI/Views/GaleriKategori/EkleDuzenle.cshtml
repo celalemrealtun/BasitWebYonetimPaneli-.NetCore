@@ -1,0 +1,24 @@
+﻿@model GaleriKategori
+@{
+    ViewData["Title"] = "Galeri Kategori Ekle Düzenle";
+}
+
+<div class="">
+
+    <form asp-controller="GaleriKategori" asp-action="EkleDuzenle" method="post">
+        <div class="card-body">
+            @Html.AntiForgeryToken()
+            <div class="text-danger" asp-validation-summary="All"></div>
+
+            <input type="hidden" name="ID" value="@Model.ID" />
+            <div class="form-group">
+                <label asp-for="KategoriAdi">Kategori Adı</label>
+                <input asp-for="KategoriAdi" class="form-control" />
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Slider Ekle Düzenle";
+}
+
+<div class="">
+
+    <form asp-controller="Slider" asp-action="EkleDuzenle" method="post" enctype="multipart/form-data">
+        <div class="card-body">
+            @Html.AntiForgeryToken()
+            <div class="text-danger" asp-validation-summary="All"></div>
+
+            <input type="hidden" name="ID" value="@Model.ID" />
+            <input type="hidden" asp-for="URL" />
+            <div class="form-group">
+                <label asp-for="URL">Resim</label>
+                <br>
+
+                @if (Model.URL != null)
+                {
+                    <img src="~/img/slider/@Model.URL" width="200" />
+                }
+                else
+                {
+                    <span style="color:orangered; text-shadow: 2px 2px 2px #000000">Lütfen Resim Ekleyin!</span>
+                }
+                 
+                <input type="file" name="Resim" id="Resim" class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Baslik">Başlık</label>
+                <input asp-for="Baslik" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Icerik">İçerik</label>
+                <input asp-for="Icerik" class="form-control" />
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+</div>

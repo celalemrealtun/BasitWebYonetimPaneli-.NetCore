@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Slider>
+@{
+    ViewData["Title"] = "Slider";
+}
+
+<div class="card-footer">
+
+    <a class="btn btn-success  btn-sm" asp-controller="Slider" asp-action="EkleDuzenle">Ekle  <i class="fa fa-plus"></i></a>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Resim</th>
+                <th>Başlık</th>
+                <th>İçerik</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td><img alt="" style="height: 50px;" class="img-responsive product-thumb" src="~/img/slider/@item.URL"></td>
+                    <td>@item.Baslik</td>
+                    <td>@item.Icerik</td>
+                    <td><a class="btn btn-primary btn-sm" asp-controller="Slider" asp-action="EkleDuzenle" asp-route-id="@item.ID">Güncelle  <i class="fa fa-pencil-alt  "></i></a></td>
+                    <td>
+                        <form asp-controller="Slider" asp-action="Sil" asp-route-id="@item.ID" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="ProductId" value="@item.ID" />
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                Sil
+                                <i class="fa fa-times fa-fw"></i>
+                            </button>
+                        </form>
+
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

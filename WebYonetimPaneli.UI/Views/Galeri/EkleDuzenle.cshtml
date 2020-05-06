@@ -1,0 +1,45 @@
+﻿@model GaleriKategori_Galeri
+@{
+    ViewData["Title"] = "Galeri  Ekle Düzenle";
+}
+
+<div class="">
+
+    <form asp-controller="Galeri" asp-action="EkleDuzenle" method="post" enctype="multipart/form-data">
+        <div class="card-body">
+            @Html.AntiForgeryToken()
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <input type="hidden" name="Galeri.ID" value="@Model.Galeri.ID" />
+            <input type="hidden" asp-for="Galeri.URL" />
+            <div class="form-group">
+                <label asp-for="Galeri.URL">Resim</label>
+                <br>
+
+                @if (Model.Galeri.URL != null)
+                {
+                    <img src="~/img/galeri/@Model.Galeri.URL" width="200" />
+                }
+                else
+                {
+                    <span style="color:orangered; text-shadow: 2px 2px 2px #000000">Lütfen Resim Ekleyin!</span>
+                }
+
+                <input type="file" name="Resim" id="Resim" class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Galeri.Aciklama">Açıklama</label>
+                <input asp-for="Galeri.Aciklama" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Galeri.GaleriKategoriID"></label>
+                <select class="form-control" asp-for="Galeri.GaleriKategoriID" asp-items="@(new SelectList(Model.GaleriKategoriler,"ID","KategoriAdi"))">
+                    <option disabled selected value="">Kategori Seçin</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+</div>
